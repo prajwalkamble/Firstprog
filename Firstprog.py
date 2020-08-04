@@ -11,10 +11,6 @@ winner = None
 # Tells who the current player is (X goes first)
 current_player = "X"
 
-
-# ------------- Functions ---------------
-
-# Play the game
 def play_game():
 
   # Game board will be displayed
@@ -40,7 +36,6 @@ def display_board():
   print(board[3] + " | " + board[4] + " | " + board[5] + "     4 | 5 | 6")
   print(board[6] + " | " + board[7] + " | " + board[8] + "     7 | 8 | 9")
   print("\n")
-
 
 # Handle a turn for an arbitrary player
 def handle_turn(player):
@@ -106,7 +101,6 @@ def check_rows():
     return board[3] 
   elif row_3:
     return board[6] 
-  # Or return None if there was no winner
   else:
     return None
 
@@ -157,7 +151,6 @@ def check_for_tie():
   else:
     return False
 
-# Flip the current player
 def flip_player():
   global current_player
   if current_player == "X":
